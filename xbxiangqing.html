@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>申请信息详情</title>
+	<!--拒绝手机缩放-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="stylesheet" href="css/style_2.css">
+	<script type="text/javascript" src="JS/byClass.js"></script>
+	<script type="text/javascript" src="JS/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="JS/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="JS/details.js"></script>
+	<script type="text/javascript">
+		//debugger;
+		$(function(){
+			var Request = new Object();
+	   		Request = GetRequest();
+	   		var flag1=Request["bizOrderNo"];//申请单号
+	   		var flag2=Request["com_name"];//单位名称
+		   	var flag4=Request["msg"];//业务办理状态
+		   	var flag5=Request["tax_reg_no"];//统一社会代码号
+		   	var flag6=Request["agent"];//经办人姓名
+		   	var flag7=Request["agent_mobile"];//经办人电话
+		   	var flag8=Request["biz_total_cost"];//业务费用
+		   	var flag9=Request["mail_status"];//邮寄状态
+	   		var flag10=Request["courier_firm_name"];//快递公司
+	   		var flag11=Request["courier_order_no"];//快递单号
+	   		var flag12=Request["invoice_acquire_status"];//发票领取状态
+	   		var flag13=Request["dzfp_flag"];//发票类型
+			//alert(flag4);
+			document.getElementById("bizOrderNo").innerHTML=flag1;
+ 			document.getElementById("com_name").innerHTML=flag2;
+   			document.getElementById("msg").innerHTML=flag4;
+   			document.getElementById("tax_reg_no").innerHTML=flag5;
+     		document.getElementById("agent").innerHTML=flag6;
+      		document.getElementById("agent_mobile").innerHTML=flag7;
+       		document.getElementById("biz_total_cost").innerHTML=flag8+"&nbsp(单位：元)";
+       		if(flag9==1){
+       			document.getElementById("mail_status").innerHTML="已邮寄";
+       		}else if(flag9==0){
+       			document.getElementById("mail_status").innerHTML="未邮寄";
+       		}
+     		document.getElementById("courier_firm_name").innerHTML=flag10+"快递";
+      		document.getElementById("courier_order_no").innerHTML=flag11;
+       		// document.getElementById("invoice_acquire_status").innerHTML=flag12;
+       		if(flag13==1){
+       			document.getElementById("dzfp_flag").innerHTML="电子发票";
+       		}else if(flag13==2){
+       			document.getElementById("dzfp_flag").innerHTML="机打发票";
+       		}
+		});
+	</script>
+</head>
+<body>
+<!-- 正文 -->
+	<div style="position:fixed;width: 100%;">
+		<div class="head">
+			<!-- <div><a href="newuser.html"><img src="img/icon1.png" alt=""></a></div> -->
+			申请信息详情
+		</div>
+		<p>新办证书用户申请信息详情</p>
+	</div>
+	<div class="center">
+		<ul>
+			<li>申请单号</li>
+			<li id="bizOrderNo"></li>
+		</ul>
+		<ul>
+			<li>单位名称</li>
+			<li id="com_name"></li>
+		</ul>
+		<ul>
+			<li>统一社会代码号</li>
+			<li id="tax_reg_no"></li>
+		</ul>
+		<ul>
+			<li>业务受理状态</li>
+			<li id="msg"></li>
+		</ul>
+		<ul>
+			<li>经办人姓名</li>
+			<li id="agent"></li>
+		</ul>
+		<ul>
+			<li>手机号码</li>
+			<li id="agent_mobile"></li>
+		</ul>
+		<ul>
+			<li>证书类型</li>
+			<li>证书新办</li>
+		</ul>
+		<ul>
+			<li>业务费用</li>
+			<li id="biz_total_cost"></li>
+		</ul>
+		<ul>
+			<li>邮寄状态</li>
+			<li id="mail_status"></li>
+		</ul>
+		<ul>
+			<li>快递公司</li>
+			<li id="courier_firm_name"></li>
+		</ul>
+		<ul>
+			<li>快递单号</li>
+			<li id="courier_order_no"></li>
+		</ul>
+		<ul>
+			<li>发票类型</li>
+			<li id="dzfp_flag"></li>
+		</ul>
+		<!-- <ul>
+			<li>发票领取状态</li>
+			<li id="invoice_acquire_status"></li>
+		</ul> -->
+	<!-- 	<ul>
+			<li>发票</li>
+			<span id="download">下载</span>
+		</ul>  -->
+	</div>
+</body>
+</html>

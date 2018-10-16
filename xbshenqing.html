@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>申请信息</title>
+	<!--拒绝手机缩放-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="stylesheet" href="css/style_2.css">
+	<script type="text/javascript" src="JS/byClass.js"></script>
+	<script type="text/javascript" src="JS/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="JS/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="JS/details.js"></script>
+	<script type="text/javascript" src="JS/request.js">
+	</script>
+</head>
+<body>
+	<div class="head">
+		<div><a href="newuser.html"><img src="img/icon1.png" alt=""></a></div>
+		申请信息
+	</div>
+	<p>新办证书用户申请信息</p>
+	<ul>
+		<li>申请单号</li>
+		<li class="content" id="bizOrderNo"></li>
+	</ul>
+	<ul>
+		<li>单位名称</li>
+		<li class="content" id="com_name"></li>
+	</ul>
+	<ul>
+		<li>申请时间</li>
+		<li class="content" id="biz_order_time"></li>
+	</ul>
+	<ul>
+		<li>申请类型</li>
+		<li class="content">证书新办</li>
+	</ul>
+	<ul>
+		<li>业务办理状态</li>
+		<li class="content" id="msg"></li>
+	</ul>
+	<button>查询详情</button>
+</body>
+<script type="text/javascript">
+	var btn=document.getElementsByTagName("button")[0];
+	btn.onclick=function(){
+		//debugger;
+	 var Request = new Object();
+	   Request = GetRequest();
+	   var flag1=Request["bizOrderNo"];
+	   var flag2=Request["com_name"];
+	   var flag3=Request["biz_order_time"];
+	   var flag4=Request["msg"];
+	   var flag5=Request["tax_reg_no"];
+	   var flag6=Request["agent"];
+	   var flag7=Request["agent_mobile"];
+	   var flag8=Request["biz_total_cost"];
+	   	var flag9=Request["mail_status"];//邮寄状态
+	   	var flag10=Request["courier_firm_name"];//快递公司
+	   	var flag11=Request["courier_order_no"];//快递单号
+	   	var flag12=Request["invoice_acquire_status"];
+	   	//发票领取状态
+	   	var flag13=Request["dzfp_flag"];//发票类型
+	//alert(json.bizOrderNo);
+	window.location.href="xbxiangqing.html?bizOrderNo="+flag1
+		+"&com_name="+flag2
+		+"&biz_order_time="+flag3
+		+"&msg="+flag4
+		+"&tax_reg_no="+flag5
+		+"&agent="+flag6
+		+"&agent_mobile="+flag7
+		+"&biz_total_cost="+flag8
+		+"&mail_status="+flag9
+		+"&courier_firm_name="+flag10
+		+"&courier_order_no="+flag11
+		+"&invoice_acquire_status="+flag12
+		+"&dzfp_flag="+flag13//发票类型;
+	};
+</script>
+</html>

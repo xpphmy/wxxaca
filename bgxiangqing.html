@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>申请信息详情</title>
+	<!--拒绝手机缩放-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Cache-Control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="stylesheet" href="css/style_2.css">
+	<script type="text/javascript" src="JS/byClass.js"></script>
+	<script type="text/javascript" src="JS/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="JS/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="JS/details.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var Request = new Object();
+	   		Request = GetRequest();
+	   		var flag1=Request["bizOrderNo"];
+	   		var flag2=Request["com_name"];
+		   	var flag4=Request["msg"];
+		   	var flag5=Request["tax_reg_no"];
+		   	var flag6=Request["agent"];
+		   	var flag7=Request["agent_mobile"];
+		   	var flag8=Request["biz_total_cost"];
+		   	var flag13=Request["dzfp_flag"];//发票类型
+			//alert(flag4);
+			document.getElementById("bizOrderNo").innerHTML=flag1;
+ 			document.getElementById("com_name").innerHTML=flag2;
+   			document.getElementById("msg").innerHTML=flag4;
+   			document.getElementById("tax_reg_no").innerHTML=flag5;
+     		document.getElementById("agent").innerHTML=flag6;
+      		document.getElementById("agent_mobile").innerHTML=flag7;
+       		document.getElementById("biz_total_cost").innerHTML=flag8+"&nbsp(单位：元)";
+       		if(flag13==1){
+       			document.getElementById("dzfp_flag").innerHTML="电子发票";
+       		}else{
+       			document.getElementById("dzfp_flag").innerHTML="机打发票";
+       		}
+		});
+	</script>
+<!-- /*正文*/ -->
+</head>
+<body>
+	<div class="head">
+		<!-- <div><a href="yqshenqing.html"><img src="img/icon1.png" alt=""></a></div> -->
+		申请信息详情
+	</div>
+	<p>变更证书用户申请信息详情</p>
+	<div>
+		<ul>
+			<li>申请单号</li>
+			<li id="bizOrderNo"></li>
+		</ul>
+		<ul>
+			<li>单位名称</li>
+			<li id="com_name"></li>
+		</ul>
+		<ul>
+			<li>统一社会代码号</li>
+			<li id="msg"></li>
+		</ul>
+		<ul>
+			<li>业务受理状态</li>
+			<li id="tax_reg_no"></li>
+		</ul>
+		<ul>
+			<li>经办人姓名</li>
+			<li id="agent"></li>
+		</ul>
+		<ul>
+			<li>手机号码</li>
+			<li id="agent_mobile"></li>
+		</ul>
+		<ul>
+			<li>证书类型</li>
+			<li>证书变更</li>
+		</ul>
+		<ul>
+			<li>业务费用</li>
+			<li id="biz_total_cost"></li>
+		</ul>
+		<ul>
+			<li>发票类型</li>
+			<li id="dzfp_flag"></li>
+		</ul>
+		<!-- <ul>
+			<li>发票</li>
+			<span id="download">下载</span>
+		</ul> -->
+	</div>
+</body>
+</html>

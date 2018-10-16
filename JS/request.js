@@ -1,0 +1,23 @@
+	$(function(){
+	   debugger;
+	   var Request = new Object();
+	   Request = GetRequest();
+	   var flag1=Request["bizOrderNo"];
+	   var flag2=Request["com_name"];
+	   var flag3=Request["biz_order_time"];
+	   var flag4=Request["msg"];
+	   var flag5=Request["tax_reg_no"];
+	   var flag6=Request["agent"];
+	   var flag7=Request["agent_mobile"];
+	   var flag8=Request["biz_total_cost"];
+	   var flag9=Request["mail_status"];
+	   var flag10=Request["courier_firm_name"];
+	   var flag11=Request["courier_order_no"];
+	   //var flag12=Request["invoice_acquire_status"];
+	   var flag13=Request["dzfp_flag"];
+	   //alert(flag8);
+	   document.getElementById("bizOrderNo").innerHTML=flag1;
+	   document.getElementById("com_name").innerHTML=flag2;
+	   document.getElementById("biz_order_time").innerHTML=flag3;
+	   document.getElementById("msg").innerHTML=flag4;
+	});

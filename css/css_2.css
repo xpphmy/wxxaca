@@ -1,0 +1,379 @@
+*{
+			margin: 0;padding:0;
+		}
+		/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+}
+/* 去除iPhone中默认的input样式  清除苹果浏览器的圆角表单*/
+input[type="submit"],
+
+input[type="reset"],
+
+input[type="button"]
+
+input{-webkit-appearance:none; resize: none;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section {
+display: block;
+}
+/* 图片自适应 */
+img {
+max-width: 100%;
+height: auto;
+width:auto\9; /* ie8 */
+-ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article, 
+aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{margin:0; padding:0; border:none;}
+body{font-family: Microsoft YaHei,Tahoma,Arial,sans-serif; color:#555;font-size: 62.5%;}
+em,i{font-style:normal;}
+strong{font-weight: normal;}
+.clearfix:after{content:""; display:block; visibility:hidden; height:0; clear:both;}
+.clearfix{zoom:1;}
+a{text-decoration:none; color:#969696; font-family: Microsoft YaHei,Tahoma,Arial,sans-serif;}
+a:hover{ text-decoration:none;}
+ul,ol{list-style:none;}
+h1, h2, h3, h4, h5, h6{ font-size:100%; font-family: Microsoft YaHei;}
+img{border: none;}
+.scope{min-width:320px; max-width:540px;}
+html {
+	font-family: "微软雅黑", Arial, sans-serif;
+	font-size: 20px;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, button, textarea, p, th, td, b, i, strong {
+	padding: 0;
+	margin: 0;
+	font-family: Microsoft YaHei, sans-serif, Arial;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent; /* For some Androids */
+
+}
+span{
+	outline: none;
+}
+strong, b {
+	font-weight: normal;
+}
+i,em{ font-style:normal;}
+fieldset, img {
+	border: 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+	outline: none;
+	-webkit-appearance:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+li {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+input, button{
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit
+}
+input, button{
+*font-size:100%;
+}
+/*正文*/
+.body{
+	width: 100%;
+	height: 100%;
+	margin:0 auto;
+}
+/*表头*/
+.head{
+	width: 100%;
+	height: 45px;
+	font-size:1.8em;
+	line-height: 45px;
+	text-align: center;
+	color: #fff;
+	background: #393a3f;
+	position: relative;
+}
+.head div{
+	position: absolute;left: 0;top: 0;z-index: 2;
+}
+.head div a{
+	width: 40px;
+	height: 45px;
+	display: block;
+}
+.head div img{
+	width: 14px;
+	height: 23px;
+	margin-top: 10px;
+}
+.clear{
+	clear: both;
+	border: 0 none;
+}
+@media  (max-width: 425px){
+	/*logo*/
+		.img_jpg1{
+			height: 2.5rem;
+		}
+		.img_jpg1 img{
+			width: 100%;
+			height: 2.5rem;
+		}
+	/*标题*/
+		#cen1{
+			height:2.0rem;
+			background-color:#ededed;
+			color: #1776d0;
+			font-family:Microsoft YaHei;
+			font-size:0.85rem;
+			line-height: 2.0rem;
+			padding-left:4%;
+		}
+/*center*/
+		.center{
+			/*width: 94%;*/
+			height:12.6rem;
+			margin: 0 auto;
+		}
+		.center .inner{
+			height:3.9rem;
+			padding:0.5rem 3%;
+			margin-bottom:0.5rem;
+			background: #f8f8f8;
+			border-top:1px solid #d1d4d5;
+			border-bottom:1px solid #d1d4d5;
+		}
+		h1{
+			width: 20%;
+			height: 3.9rem;
+		}
+		h1 img{
+			width: 100%;
+			height: 3.9rem;
+		}
+		h1,h2,h3{
+			float: left;
+		}
+		h2{
+			width:55%;
+			height:3.2rem;
+			margin:0.35rem 2%;
+		}
+		h2 li:nth-child(1){
+			font-size: 0.85rem;
+			color: #000;
+
+		}
+		h2 li:nth-child(2){
+			font-size: 0.6rem;
+			color: #999;
+		}
+	/* 查询*/
+		h3{
+			width: 20%;
+			height:1.8rem;
+			margin-top:1.05rem;
+			background: #017fe6;
+		}
+		h3 a{
+			display: block;
+			width: 100%;
+			height:1.8rem;
+			color: #fff;
+			font-size:0.85rem;
+			line-height: 1.8rem;
+			text-align: center;
+		}
+}
+@media  (min-width: 425px) and (max-width: 768px){
+/*表头*/
+	.head{
+		height: 50px;
+		font-size:1.9em;
+		line-height: 50px;
+	}
+	.head div a{
+		width: 50px;
+		height: 47px;
+		padding-top: 3px;
+	}
+	.head div img{
+		width: 15px;
+		height: 25px;
+	}
+	/*logo*/
+		.img_jpg1{
+			height:3.3rem;
+		}
+		.img_jpg1 img{
+			width: 100%;
+			height: 3.3rem;
+		}
+	/*标题*/
+		#cen1{
+			height:3.0rem;
+			background-color:#ededed;
+			color: #1776d0;
+			font-family:Microsoft YaHei;
+			font-size:1.2rem;
+			line-height: 3.0rem;
+			padding-left:4%;
+		}
+	/*center*/
+		.center{
+			height:30rem;
+			margin: 0 auto;
+		}
+		.center .inner{
+			height:5rem;
+			padding:0.5rem 3%;
+			margin-top:0.2rem;
+			background: #f8f8f8;
+			border-top:1px solid #d1d4d5;
+			border-bottom:1px solid #d1d4d5;
+		}
+		h1{
+			width: 20%;
+			height: 5rem;
+		}
+		h1 img{
+			width: 100%;
+			height: 5rem;
+		}
+		h1,h2,h3{
+			float: left;
+		}
+		h2{
+			width:55%;
+			height:5rem;
+			margin:0.5rem 2.5%;
+		}
+		h2 li:nth-child(1){
+			font-size:1.1rem;
+			color: #000;
+
+		}
+		h2 li:nth-child(2){
+			font-size: 1.0rem;
+			color: #999;
+		}
+	/*查询*/
+		h3{
+			width: 20%;
+			height:2rem;
+			margin-top:1rem;
+			background: #017fe6;
+		}
+		h3 a{
+			display: block;
+			width: 100%;
+			height:2rem;
+			color: #fff;
+			font-size:1.0rem;
+			line-height: 2rem;
+			text-align: center;
+			/*border: 1px solid red;*/
+		}
+
+}
+@media (min-width: 768px){
+	/*表头*/
+	.head{
+		height: 80px;
+		font-size:2.9em;
+		line-height: 80px;
+	}
+	.head div a{
+		width: 80px;
+		height: 70px;
+		padding-top: 5px;
+	}
+	.head div img{
+		width: 35px;
+		height: 45px;
+	}
+	/*logo*/
+		.img_jpg1{
+			height:5.5rem;
+		}
+		.img_jpg1 img{
+			width: 100%;
+			height: 5.5rem;
+		}
+	/*标题*/
+		#cen1{
+			height:6.0rem;
+			background-color:#ededed;
+			color: #1776d0;
+			font-family:Microsoft YaHei;
+			font-size:2.0rem;
+			line-height: 6.0rem;
+			padding-left:4%;
+		}
+/*center*/
+		.center{
+			height:24rem;
+			margin: 0 auto;
+		}
+		.center .inner{
+			height:8rem;
+			padding:0.5rem 5%;
+			margin-top:0.5rem;
+			background: #f8f8f8;
+			border-top:1px solid #d1d4d5;
+			border-bottom:1px solid #d1d4d5;
+		}
+		h1{
+			width: 20%;
+			height: 8rem;
+		}
+		h1 img{
+			width: 100%;
+			height: 8rem;
+		}
+		h1,h2,h3{
+			float: left;
+		}
+		h2{
+			width:55%;
+			height:8rem;
+			margin:0.45rem 2.5%;
+		}
+		h2 li:nth-child(1){
+			font-size:2.1rem;
+			color: #000;
+
+		}
+		h2 li:nth-child(2){
+			font-size: 1.7rem;
+			color: #999;
+		}
+	/* 查询*/
+		h3{
+			width: 20%;
+			height:4rem;
+			margin-top:2.05rem;
+			background: #017fe6;
+		}
+		h3 a{
+			display: block;
+			width: 100%;
+			height:4rem;
+			color: #fff;
+			font-size:1.85rem;
+			line-height: 4rem;
+			text-align: center;
+		}
+}
